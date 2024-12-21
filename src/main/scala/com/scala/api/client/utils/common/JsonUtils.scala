@@ -1,4 +1,4 @@
-package com.scala.api.client.utils.post
+package com.scala.api.client.utils.common
 
 import com.scala.api.client.common.logger.Logging
 

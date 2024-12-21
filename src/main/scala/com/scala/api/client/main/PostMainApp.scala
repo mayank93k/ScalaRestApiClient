@@ -1,7 +1,8 @@
 package com.scala.api.client.main
 
 import com.scala.api.client.common.logger.Logging
-import com.scala.api.client.utils.post.{HttpUtils, JsonUtils}
+import com.scala.api.client.utils.common.JsonUtils
+import com.scala.api.client.utils.post.HttpUtils
 
 /**
  * The POST Request sends data to the server to create a new resource. In the code, we specify the server endpoint URL
@@ -18,7 +19,7 @@ object PostMainApp extends Logging {
     logger.info(s"Api Url link: " + urlString)
 
     logger.info("Read the JSON payload from a file")
-    val jsonPayload = JsonUtils.readJsonFromFile("src/main/resources/post/input/data.json")
+    val jsonPayload = JsonUtils.readJsonFromFile("src/main/resources/post/input/postdata.json")
 
     logger.info("If the JSON was successfully read, make the POST request")
     if (jsonPayload.nonEmpty) {
