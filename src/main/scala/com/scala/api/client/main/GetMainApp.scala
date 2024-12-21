@@ -1,5 +1,6 @@
 package com.scala.api.client.main
 
+import com.scala.api.client.common.logger.Logging
 import com.scala.api.client.utils.get.HttpUtils
 
 /**
@@ -9,15 +10,16 @@ import com.scala.api.client.utils.get.HttpUtils
  * If successful, we read the response using a BufferedReader, print it to the console, ensure the input stream is closed,
  * and disconnect the connection. A typical use case for this is retrieving a blog post or user details.
  */
-object GetMainApp {
+object GetMainApp extends Logging {
   def main(args: Array[String]): Unit = {
     val urlString = "https://jsonplaceholder.typicode.com/posts/1" // Sample API URL
+    logger.info(s"Api Url link: " + urlString)
 
-    // Call the sendGetRequest function from HttpUtils to perform the GET request
+    logger.info("Call the sendGetRequest function from HttpUtils to perform the GET request")
     val response = HttpUtils.sendGetRequest(urlString)
 
     // Print the response content
-    println("Response Content:")
+    logger.info("Response Content:")
     println(response)
   }
 }
