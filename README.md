@@ -12,5 +12,8 @@ It's designed to help developers get started with Scala-based HTTP clients for i
 ## 3. PUT Request
 ![img.png](readme/img1.png)
 
+## 4. DELETE Request
+![img.png](readme/img5.png)
+
 ## Key Differences Between GET and POST in Code
 ![img.png](readme/img.png)
