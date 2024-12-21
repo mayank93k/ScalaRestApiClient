@@ -5,7 +5,9 @@ import com.scala.api.client.common.logger.Logging
 import scala.io.Source
 
 object JsonUtils extends Logging {
-  // Function to read JSON content from a file
+  /**
+   * Function to read JSON content from a file
+   */
   def readJsonFromFile(filePath: String): String = {
     try {
       logger.info("Read the file and return the content as a string")

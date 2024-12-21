@@ -6,7 +6,9 @@ import java.io.{BufferedReader, InputStreamReader}
 import java.net.{HttpURLConnection, URL}
 
 object HttpUtils extends Logging {
-  // Function for performing a GET request
+  /**
+   * Function for performing a GET request
+   */
   def sendGetRequest(urlString: String): String = {
     val url = new URL(urlString)
     val connection = url.openConnection().asInstanceOf[HttpURLConnection]
